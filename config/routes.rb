@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   get "login", to: "user_sessions#new"
   post "login", to: "user_sessions#create"
   delete "logout", to: "user_sessions#destroy"
-  resources :memory_items, only: %i[index]
+  resources :memory_items, only: %i[index new create]
 end

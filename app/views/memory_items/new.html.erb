@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 offset-lg-2">
+      <h1>思い出のモノ登録</h1>
+      <%= form_with model: @memory_item, class: "new_memory_item" do |f| %>
+        <div class="mb-3">
+          <%= f.label :name %>
+          <%= f.text_field :name, class: "form-control" %>
+        </div>
+        <div class="mb-3">
+          <%= f.label :memory %>
+          <%= f.text_area :memory, class: "form-control", rows: "10" %>
+        </div>
+        <%= f.submit nil, class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+</div>
