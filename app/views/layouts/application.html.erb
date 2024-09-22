@@ -10,7 +10,6 @@
     <%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
     <link rel="icon" href="data:,">
   </head>
-
   <body>
     <% if logged_in? %>
       <%= render 'shared/header' %>
@@ -22,3 +21,4 @@
     <%= render 'shared/footer' %>
   </body>
 </html>
+
