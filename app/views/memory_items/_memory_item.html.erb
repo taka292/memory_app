@@ -1,11 +1,11 @@
 <div class="col-sm-12 col-lg-4 mb-3">
   <div id="memorymemory_item-id-<%=memory_item.id %>">
     <div class="card">
-      <%= image_tag "memory_item_placeholder.png", class: "card-img-top", width: "300", height:"200" %>
+      <%= image_tag memory_item.memory_item_image_url, class: "card-img-top", width: "300", height:"200" %>
       <div class="card-body">
         <div class="d-flex">
           <h4 class="card-title">
-            <%= link_to memory_item.name, '#' %>
+            <%= link_to memory_item.name, memory_item_path(memory_item) %>
           </h4>
           <div class='ms-auto'>
             <%= link_to '#', id: 'button-edit-#{memorymemory_item.id}' do %>

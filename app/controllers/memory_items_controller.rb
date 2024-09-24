@@ -17,9 +17,15 @@ class MemoryItemsController < ApplicationController
     end
   end
 
+  def show
+    @memory_item = MemoryItem.find(params[:id])
+    @comment = Comment.new
+    @comments = @memory_item.comments.includes(:user).order(created_at: :desc)
+  end
+
   private
 
   def memory_item_params
-    params.require(:memory_item).permit(:name, :memory)
+    params.require(:memory_item).permit(:name, :memory,:memory_item_image, :memory_item_image_cache)
   end
 end
