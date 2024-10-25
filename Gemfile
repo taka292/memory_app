@@ -61,7 +61,7 @@ end
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
-  gem "pg", "~> 1.1"
+  gem "pg", "~> 1.5"
 end
 
 group :test do
@@ -71,5 +71,5 @@ group :test do
 end
 
 group :production do
-  gem "pg", "~> 1.1"
+  gem "pg", "~> 1.5"
 end
